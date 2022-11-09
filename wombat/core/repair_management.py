@@ -21,7 +21,7 @@ from wombat.core import (
 
 if TYPE_CHECKING:
     from wombat.core import Port, ServiceEquipment
-    from wombat.windfarm import Windfarm
+    from wombat.windfarm import WindFarm
 
 
 class RepairManager(FilterStore):
@@ -41,7 +41,7 @@ class RepairManager(FilterStore):
     ----------
     env : wombat.core.WombatEnvironment
         The simulation environment.
-    windfarm: wombat.windfarm.Windfarm
+    windfarm: wombat.windfarm.WindFarm
         The simulated windfarm. This is only used for getting the operational capacity.
     _current_id : int
         The logged and auto-incrememented integer base for the ID generated for each
@@ -80,7 +80,7 @@ class RepairManager(FilterStore):
             for c in capability:
                 mapping.update(c, strategy_threshold, service_equipment)
 
-    def _register_windfarm(self, windfarm: Windfarm) -> None:
+    def _register_windfarm(self, windfarm: WindFarm) -> None:
         """Adds the simulation windfarm to the class attributes"""
         self.windfarm = windfarm
 

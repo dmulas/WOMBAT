@@ -16,7 +16,7 @@ from wombat.core import (
     ServiceEquipment,
     WombatEnvironment,
 )
-from wombat.windfarm import Windfarm
+from wombat.windfarm import WindFarm
 from wombat.core.port import Port
 from wombat.core.library import load_yaml, library_map
 
@@ -50,7 +50,7 @@ class Configuration(FromDictMixin):
     library : str
         The data directory. See ``wombat.simulation.WombatEnvironment`` for more details.
     layout : str
-        The windfarm layout file. See ``wombat.Windfarm`` for more details.
+        The windfarm layout file. See ``wombat.WindFarm`` for more details.
     service_equipment : str | list[str]
         The equpiment that will be used in the simulation. See
         ``wombat.core.ServiceEquipment`` for more details.
@@ -123,7 +123,7 @@ class Simulation(FromDictMixin):
     config: Configuration = field()
 
     metrics: Metrics = field(init=False)
-    windfarm: Windfarm = field(init=False)
+    windfarm: WindFarm = field(init=False)
     env: WombatEnvironment = field(init=False)
     repair_manager: RepairManager = field(init=False)
     service_equipment: list[ServiceEquipment] = field(init=False)
@@ -223,7 +223,7 @@ class Simulation(FromDictMixin):
             end_year=self.config.end_year,
         )
         self.repair_manager = RepairManager(self.env)
-        self.windfarm = Windfarm(self.env, self.config.layout, self.repair_manager)
+        self.windfarm = WindFarm(self.env, self.config.layout, self.repair_manager)
         self.service_equipment = []
         for service_equipment in self.config.service_equipment:
             self.service_equipment.append(

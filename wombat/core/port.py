@@ -18,7 +18,7 @@ import simpy
 from simpy.events import Process, Timeout
 from simpy.resources.store import FilterStore
 
-from wombat.windfarm import Windfarm
+from wombat.windfarm import WindFarm
 from wombat.core.mixins import RepairsMixin
 from wombat.core.library import load_yaml
 from wombat.utilities.time import hours_until_future_hour
@@ -40,7 +40,7 @@ class Port(RepairsMixin, FilterStore):
     ----------
     env : WombatEnvironment
         The simulation environment instance.
-    windfarm : Windfarm
+    windfarm : WindFarm
         The simulation windfarm instance.
     repair_manager : RepairManager
         The simulation repair manager instance.
@@ -52,7 +52,7 @@ class Port(RepairsMixin, FilterStore):
     ----------
     env : WombatEnvironment
         The simulation environment instance.
-    windfarm : Windfarm
+    windfarm : WindFarm
         The simulation windfarm instance.
     manager : RepairManager
         The simulation repair manager instance.
@@ -83,7 +83,7 @@ class Port(RepairsMixin, FilterStore):
     def __init__(
         self,
         env: WombatEnvironment,
-        windfarm: Windfarm,
+        windfarm: WindFarm,
         repair_manager: RepairManager,
         config: dict | str | Path,
     ) -> None:

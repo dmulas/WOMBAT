@@ -22,7 +22,7 @@ from wombat.core import (
     WombatEnvironment,
     ServiceEquipmentData,
 )
-from wombat.windfarm import Windfarm
+from wombat.windfarm import WindFarm
 from wombat.utilities import HOURS_IN_DAY, cache, hours_until_future_hour
 from wombat.core.mixins import RepairsMixin
 from wombat.core.library import load_yaml
@@ -148,8 +148,8 @@ class ServiceEquipment(RepairsMixin):
     ----------
     env : WombatEnvironment
         The simulation environment.
-    windfarm : Windfarm
-        The ``Windfarm`` object.
+    windfarm : WindFarm
+        The ``WindFarm`` object.
     repair_manager : RepairManager
         The ``RepairManager`` object.
     equipment_data_file : str
@@ -159,7 +159,7 @@ class ServiceEquipment(RepairsMixin):
     ----------
     env : WombatEnvironment
         The simulation environment instance.
-    windfarm : Windfarm
+    windfarm : WindFarm
         The simulation windfarm instance.
     manager : RepairManager
         The simulation repair manager instance.
@@ -188,7 +188,7 @@ class ServiceEquipment(RepairsMixin):
     def __init__(
         self,
         env: WombatEnvironment,
-        windfarm: Windfarm,
+        windfarm: WindFarm,
         repair_manager: RepairManager,
         equipment_data_file: str,
     ):
@@ -198,8 +198,8 @@ class ServiceEquipment(RepairsMixin):
         ----------
         env : WombatEnvironment
             The simulation environment.
-        windfarm : Windfarm
-            The ``Windfarm`` object.
+        windfarm : WindFarm
+            The ``WindFarm`` object.
         repair_manager : RepairManager
             The ``RepairManager`` object.
         equipment_data_file : str

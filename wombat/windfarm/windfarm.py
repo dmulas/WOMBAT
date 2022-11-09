@@ -1,4 +1,4 @@
-"""Creates the Windfarm class/model."""
+"""Creates the WindFarm class/model."""
 from __future__ import annotations
 
 from math import fsum
@@ -15,7 +15,7 @@ from wombat.windfarm.system import Cable, System
 from wombat.utilities.utilities import cache
 
 
-class Windfarm:
+class WindFarm:
     """The primary class for operating on objects within a windfarm. The substations,
     cables, and turbines are created as a network object to be more appropriately accessed
     and controlled.

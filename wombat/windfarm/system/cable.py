@@ -28,8 +28,8 @@ class Cable:
 
     Parameters
     ----------
-    windfarm : ``wombat.windfarm.Windfarm``
-        The ``Windfarm`` object.
+    windfarm : ``wombat.windfarm.WindFarm``
+        The ``WindFarm`` object.
     env : WombatEnvironment
         The simulation environment.
     cable_id : str
@@ -52,8 +52,8 @@ class Cable:
 
         Parameters
         ----------
-        windfarm : ``wombat.windfarm.Windfarm``
-            The ``Windfarm`` object.
+        windfarm : ``wombat.windfarm.WindFarm``
+            The ``WindFarm`` object.
         env : WombatEnvironment
             The simulation environment.
         cable_id : str

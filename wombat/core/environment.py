@@ -601,7 +601,7 @@ class WombatEnvironment(simpy.Environment):
 
     def power_production_potential_to_csv(  # type: ignore
         self,
-        windfarm: "wombat.windfarm.Windfarm",  # type: ignore
+        windfarm: "wombat.windfarm.WindFarm",  # type: ignore
         operations: Optional[pd.DataFrame] = None,
         return_df: bool = True,
     ) -> Tuple[pd.DataFrame, pd.DataFrame]:
@@ -609,7 +609,7 @@ class WombatEnvironment(simpy.Environment):
 
         Parameters
         ----------
-        windfarm : wombat.windfarm.Windfarm
+        windfarm : wombat.windfarm.WindFarm
             The simulation's windfarm object.
         operations : Optional[pd.DataFrame], optional
             The operations log ``DataFrame`` if readily available, by default None. If
